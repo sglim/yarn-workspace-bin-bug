@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "typescript": "4.0.2"
+  "bin": {
+    "myBin": "./cli_v1.js"
   }
 }
