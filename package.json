@@ -7,7 +7,6 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "project_a",
-    "project_b"
+    "packages/*"
   ]
 }

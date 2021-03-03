@@ -1,8 +1,6 @@
 {
-  "name": "project_a",
+  "name": "my_project_with_bin",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
   "private": true,
   "bin": {
     "myBin": "./cli_v1.js"

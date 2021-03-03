@@ -8,21 +8,18 @@ This project shows a sample to reproduce yarn workspace .bin path resolving bug
 
 1. Install workspace with yarn
 
-2. In `project_a` (typescript 4.0.2)
+Symlinks
+* packages/workspace-1/node_modules/.bin/myBin -> ../../../../node_modules/my_project_with_bin/cli_v1.js
+* packages/workspace-2/node_modules/.bin/myBin -> ../my_project_with_bin/cli_v2.js
 
-When you run `yarn bin`
-➜ `/repos/yarn-workspace-bin-bug/project_a/node_modules/.bin`
+2. In `workspace-1` (depends on `my_project_with_bin/v1`)
 
-When you run `yarn bin tsc`
-➜ `/repos/yarn-workspace-bin-bug/node_modules/.bin/tsc`
+When you run `yarn bin myBin`
+➜ `/repos/yarn-workspace-bin-bug/node_modules/.bin/myBin`
 
-3. In `project_b` (typescript 4.2.2)
+3. In `workspace-2` (typescript `my_project_with_bin/v2`)
 
-When you run `yarn bin`
-➜ `/repos/yarn-workspace-bin-bug/project_b/node_modules/.bin`
+When you run `yarn bin myBin`
+➜ `/repos/yarn-workspace-bin-bug/node_modules/.bin/myBin`
 
-When you run `yarn bin tsc`
-➜ `/repos/yarn-workspace-bin-bug/node_modules/.bin/tsc`
-
-4. `yarn bin tsc` should indicate individual .bin folder for the project respectively.
-
+4. `yarn bin myBin` should indicate individual .bin folder for the project respectively.

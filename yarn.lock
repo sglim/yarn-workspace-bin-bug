@@ -2,3 +2,8 @@
 # yarn lockfile v1
 
 
+"my_project_with_bin@file:my_project_with_bin/v1":
+  version "1.0.0"
+
+"my_project_with_bin@file:my_project_with_bin/v2":
+  version "2.0.0"
