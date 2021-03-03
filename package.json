@@ -1,0 +1,13 @@
+{
+  "name": "yarn-workspace-bin-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sglim/yarn-workspace-bin-bug.git",
+  "author": "Seung-gi Lim <seung.gi.lim@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "project_a",
+    "project_b"
+  ]
+}
